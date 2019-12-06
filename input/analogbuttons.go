@@ -23,6 +23,9 @@ func (ab *AnalogButtons) Get() Button {
 	value := ab.pin.Get()
 	for i := 0; i < 5; i++ {
 		if value >= ab.limits[i*2] && value <= ab.limits[i*2+1] {
+			if ab.pressed {
+				return NONE
+			}
 			ab.pressed = true
 			return Button(i)
 		}
