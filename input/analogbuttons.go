@@ -15,7 +15,7 @@ func NewAnalogButtons(pin machine.Pin) AnalogButtons {
 
 	return AnalogButtons{
 		pin:    analogPin,
-		limits: [10]uint16{49000, 50000, 32000, 33500, 56000, 57000, 43000, 45000, 52000, 54000},
+		limits: [10]uint16{32000, 33500, 49000, 50000, 56000, 57000, 43000, 45000, 52000, 54000},
 	}
 }
 

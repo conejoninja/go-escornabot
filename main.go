@@ -6,8 +6,8 @@ import (
 	"github.com/conejoninja/go-escornabot/bot"
 	"github.com/conejoninja/go-escornabot/input"
 
-	"tinygo.org/x/drivers/easystepper"
 	"tinygo.org/x/drivers/buzzer"
+	"tinygo.org/x/drivers/easystepper"
 )
 
 func main() {
@@ -18,7 +18,7 @@ func main() {
 	bzrPin.Configure(machine.PinConfig{Mode: machine.PinOutput})
 	bzr := buzzer.New(bzrPin)
 
-	escornabot := bot.New(&motors, &buttons, &bzr, 542)
+	escornabot := bot.New(&motors, &buttons, &bzr, 720, 542)
 
 	escornabot.Loop()
 }
